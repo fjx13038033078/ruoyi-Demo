@@ -1,6 +1,5 @@
 package com.ruoyi.common.core.domain.entity;
 
-import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 import javax.validation.constraints.*;
@@ -126,11 +125,6 @@ public class SysUser extends BaseEntity {
      */
     private Long roleId;
 
-    /**
-     * 余额
-     */
-    private BigDecimal balance;
-
     public SysUser() {
 
     }
@@ -157,14 +151,6 @@ public class SysUser extends BaseEntity {
 
     public Long getDeptId() {
         return deptId;
-    }
-
-    public void setBalance(BigDecimal balance) {
-        this.balance = balance;
-    }
-
-    public BigDecimal getBalance() {
-        return balance;
     }
 
     public void setDeptId(Long deptId) {
@@ -329,7 +315,6 @@ public class SysUser extends BaseEntity {
                 .append("updateTime", getUpdateTime())
                 .append("remark", getRemark())
                 .append("dept", getDept())
-                .append("balance", getBalance())
                 .toString();
     }
 }
